@@ -6,11 +6,11 @@ namespace DesignPatterns
 {
     class UFOEnemyShip : EnemyShip
     {
-        public UFOEnemyShip()
+       
+
+        public UFOEnemyShip(IEnemyShipFactory shipFactory)
         {
-            name = "UFO enemy ship";
-            damage = "20";
-            speed = "400";
+            engine = shipFactory.installEngine();
         }
     }
 }

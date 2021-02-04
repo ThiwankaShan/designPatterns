@@ -12,6 +12,8 @@ namespace DesignPatterns
 
         public string speed;
 
+        public IEnemyShipEngine engine;
+
         public string attack()
         {
             return $"{name} does {damage} damage";
@@ -21,5 +23,11 @@ namespace DesignPatterns
         {
             return $"{name} sailing at a speed of {speed}";
         }
+
+        public string upgrade()
+        {
+            return engine.getEngine();
+        }
+        
     }
 }

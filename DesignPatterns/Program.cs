@@ -9,7 +9,7 @@ namespace DesignPatterns
 
             //============  STRATERGY PATTERN   =============================
             /*=============================================== 
-             
+
             Worker shan = new Worker();
 
             shan.Type = new butcher();
@@ -25,16 +25,27 @@ namespace DesignPatterns
 
 
             //===========   FACTORY PATTERN    ================================
-            /*================================================
-             
-            EnemyShipFactory shipFactory = new EnemyShipFactory();
+            /*==================================================================
 
-            EnemyShip ship = shipFactory.makeEnemyShip("R");
+            UFOEnemyshipFactory shipFactory = new UFOEnemyshipFactory();
 
-            Console.WriteLine(ship.attack());
+            EnemyShip ship = new UFOEnemyShip(shipFactory);
 
-            ==================================================*/
+            Console.WriteLine(ship.upgrade());
 
+            =====================================================================*/
+
+            //===========   OBSERVER PATTERN    ================================
+            /*==================================================================
+            Subject subject = new Subject();
+            StockObserver google = new Google(subject);
+            StockObserver apple = new Apple(subject);
+
+            subject.update();
+            subject.update();
+            subject.update();
+
+            =====================================================================*/
 
         }
     }
