@@ -24,6 +24,7 @@ namespace DesignPatterns
 
 
 
+
             //===========   FACTORY PATTERN    ================================
             /*==================================================================
 
@@ -34,6 +35,8 @@ namespace DesignPatterns
             Console.WriteLine(ship.upgrade());
 
             =====================================================================*/
+
+
 
             //===========   OBSERVER PATTERN    ================================
             /*==================================================================
@@ -46,6 +49,59 @@ namespace DesignPatterns
             subject.update();
 
             =====================================================================*/
+
+
+
+            //===========   SINGLETON PATTERN    ================================
+            /*==================================================================
+             
+            Singleton item = Singleton.getInstains();
+
+            item.number = 1;
+
+            Console.WriteLine($"first instaince {item.number}");
+
+            Singleton item2 = Singleton.getInstains();
+
+            Console.WriteLine($"second instaince {item2.number}");
+
+            =====================================================================*/
+
+            //===========   BUILDER PATTERN    ================================
+            /*=================================================================
+            IRobotBuilder robot = new OldRobotBuilder();
+
+            IEngineer engineer = new Engineer(robot);
+
+            Robot robot_1 = engineer.buildRobot();
+
+            robot_1.attack();
+
+            ===================================================================*/
+
+
+            //===========   PROTOTYPE PATTERN    ================================
+            /*================================================================= 
+
+            ShapeCache cache = new ShapeCache();
+
+            Shape shape1 = cache.getShape();
+            Shape shape2 = cache.getShape();
+            
+            Console.WriteLine($" Shape 1 ID : {shape1.ID}");
+            shape1.ID = 3;
+            Console.WriteLine(" Changes shape 1 ID to 3 ");
+            Console.WriteLine($" Shape 1 ID : {shape1.ID}");
+            Console.WriteLine($" Shape 2 ID : {shape2.ID}\n");
+
+            Console.WriteLine($" Shape 1 area : {shape1.area.area}");
+            shape1.area.area = 60;
+            Console.WriteLine(" Changed shape 1 area to 60");
+            Console.WriteLine($" Shape 1 area : {shape1.area.area}");
+            Console.WriteLine($" Shape 1 area : {shape2.area.area}");
+
+            Console.WriteLine("Above result due to shallow copy (object(area) inside the shape object \ndoesnt get copied instead copy the memory location of the same area object");
+            ===================================================================*/
 
         }
     }
